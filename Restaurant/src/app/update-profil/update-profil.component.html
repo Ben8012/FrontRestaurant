@@ -1,0 +1,46 @@
+<div class="container p-3">
+    <h4>Modifiez votre profil</h4>
+    <hr>
+    <form [formGroup]="FormUpdateProfil" (ngSubmit)="update()">
+        <div class="form-group m-2">
+          <label for="lastname">Nom</label>
+          <input type="text" class="form-control" id="lastname" formControlName="lastname" placeholder="Nom">
+            <div *ngIf="Lastname.invalid && (Lastname.dirty || Lastname.touched )">
+                <div class="errors" *ngIf="Lastname.errors['required']"> le nom est requis</div>
+                <div class="errors" *ngIf="Lastname.errors['minlength']"> longueur min invalide 3</div>
+                <div class="errors" *ngIf="Lastname.errors['maxlength']">longueur max invalide 50</div>
+
+                
+            </div>
+        </div>
+        <div class="form-group m-2">
+            <label for="firstname">Prénom</label>
+            <input type="text" class="form-control" id="firstname" formControlName="firstname" placeholder="Prénom">
+        </div>
+        <div class="form-group m-2">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email">
+        </div>
+        <div class="form-group m-2">
+            <label for="street">Rue</label>
+            <input type="text" class="form-control" id="street" formControlName="street" placeholder="Rue">
+        </div>
+        <div class="form-group m-2">
+            <label for="number">Numéro</label>
+            <input type="number" class="form-control" id="number" formControlName="number" placeholder="Numéro">
+        </div>
+        <div class="form-group m-2">
+            <label for="postCode">Code postal</label>
+            <input type="text" class="form-control" id="postCode" formControlName="postCode" placeholder="Code postal">
+        </div>
+        <div class="form-group m-2">
+            <label for="city">Ville</label>
+            <input type="text" class="form-control" id="city" formControlName="city" placeholder="Ville">
+        </div>
+        
+       
+       
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+
+</div>
