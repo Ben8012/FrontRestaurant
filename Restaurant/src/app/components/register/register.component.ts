@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormRegister } from '../models/forms/register.form';
-import { UserHttpService } from '../services/http/user.http.service';
-import { SessionService } from '../services/session/session.service';
+import { FormRegister } from '../../models/forms/register.form';
+import { UserHttpService } from '../../services/http/user.http.service';
+import { SessionService } from '../../services/session/session.service';
 
 @Component({
   selector: 'app-register',
