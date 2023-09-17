@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
-import { ProfilComponent } from './profil/profil.component';
-import { UpdateProfilComponent } from './update-profil/update-profil.component'
+import { LoginComponent } from './components/login/login.component';
+import { ProfilComponent } from './components/profil/profil.component';
+import { UpdateProfilComponent } from './components/update-profil/update-profil.component';
+import { SeatingPlanComponent } from './components/seating-plan/seating-plan.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UpdateProfilComponent } from './update-profil/update-profil.component'
     RegisterComponent,
     LoginComponent,
     ProfilComponent,
-    UpdateProfilComponent
+    UpdateProfilComponent,
+    SeatingPlanComponent
   ],
   imports: [
     BrowserModule,
