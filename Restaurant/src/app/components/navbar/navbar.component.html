@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <p *ngIf="User.id" class="navbar-brand" href="#">Bonjour {{User.firstname}} {{User.lastname}}</p>
+      <a *ngIf="User.id" class="navbar-brand border border-success p-2 rounded-circle" routerLink="/profil">{{User.firstname}} </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,20 +9,21 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/register">Register</a>
-          </li>
+         
           <div *ngIf="User.id">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="" (click)="logout()">Deconnection</a>
+              <a class="nav-link active" aria-current="page"  (click)="logout()">Déconnexion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/profil" >Profil</a>
+              <a class="nav-link active" aria-current="page" routerLink="/seating-plan">Plan de tables</a>
             </li>
           </div>
           <div *ngIf="!User.id">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/login" >Connection</a>
+              <a class="nav-link active" aria-current="page" routerLink="/register">Inscription</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/login" >Connexion</a>
             </li>
           </div>
         

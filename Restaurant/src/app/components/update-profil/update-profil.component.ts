@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormUpdateProfil } from '../models/forms/update-profil.form';
-import { UserHttpService } from '../services/http/user.http.service';
-import { SessionService } from '../services/session/session.service';
+import { FormUpdateProfil } from '../../models/forms/update-profil.form';
+import { UserHttpService } from '../../services/http/user.http.service';
+import { SessionService } from '../../services/session/session.service';
 
 @Component({
   selector: 'app-update-profil',

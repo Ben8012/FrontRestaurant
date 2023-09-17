@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormLogin } from '../models/forms/login.form';
-import { UserHttpService } from '../services/http/user.http.service';
-import { SessionService } from '../services/session/session.service';
+import { FormLogin } from '../../models/forms/login.form';
+import { UserHttpService } from '../../services/http/user.http.service';
+import { SessionService } from '../../services/session/session.service';
 
 @Component({
   selector: 'app-login',
